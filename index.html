@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cruds</title>
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="container mt-5">
+      <header class="text-center">
+        <h1 class="">cruds</h1>
+        <p class="fs-3">product management systrm</p>
+      </header>
+      <section class="">
+        <form action="">
+          <div class="row">
+            <div class="col-lg-2 mb-3 mb-lg-0">
+              <input
+                id="Count"
+                class="form-control"
+                type="number"
+                placeholder="Count"
+                aria-label="default input example"
+              />
+            </div>
+
+            <div class="col-lg-5 mb-3 mb-lg-0">
+              <input
+                id="title"
+                class="form-control"
+                type="text"
+                placeholder="title"
+                aria-label="default input example"
+              />
+            </div>
+
+            <div class="col-lg-5 mb-3 mb-lg-0">
+              <input
+                id="category"
+                class="form-control"
+                type="text"
+                placeholder="category"
+                aria-label="default input example"
+              />
+            </div>
+          </div>
+
+          <div
+            class="d-lg-flex justify-content-lg-between align-items-center mt-4"
+          >
+            <div class="row align-items-center">
+              <div class="col-lg col-6 mb-3 mb-lg-0">
+                <input
+                  onkeyup="getTotle()"
+                  class="form-control"
+                  type="number"
+                  id="price"
+                  placeholder="price"
+                  aria-label="default input example"
+                />
+              </div>
+              <div class="col-lg col-6 mb-3 mb-lg-0">
+                <input
+                  onkeyup="getTotle()"
+                  class="form-control"
+                  type="number"
+                  id="taxes"
+                  placeholder="taxes"
+                  aria-label="default input example"
+                />
+              </div>
+              <div class="col-lg col-6">
+                <input
+                  onkeyup="getTotle()"
+                  class="form-control"
+                  type="number"
+                  id="ads"
+                  placeholder="ads"
+                  aria-label="default input example"
+                />
+              </div>
+              <div class="col-lg col-6">
+                <input
+                  onkeyup="getTotle()"
+                  class="form-control"
+                  type="number"
+                  id="discount"
+                  placeholder="discount"
+                  aria-label="default input example"
+                />
+              </div>
+              <div class="col-lg-3 col-6 total mt-4 mt-lg-0">
+                <small id="total"></small>
+              </div>
+            </div>
+            <div
+              class="btn-color text-center mt-5 mt-md-0 col col-md-4 ms-auto"
+            >
+              <button id="submit" class="btn px-5 w-100">create</button>
+            </div>
+          </div>
+        </form>
+
+        <div class="">
+          <div class="col-lg-6 m-auto mt-5">
+            <input
+              onkeyup="searchData(this.value)"
+              class="form-control"
+              type="search"
+              id="search"
+              placeholder="search"
+              aria-label="default input example"
+            />
+          </div>
+          <div class="d-flex justify-content-around align-items-center">
+            <div
+              class="btn-search text-center my-5 rounded rounded-3 btn-color"
+            >
+              <button
+                onclick="getSearchMood(this.id)"
+                id="searchTitle"
+                class="btn px-md-5"
+              >
+                search by title
+              </button>
+            </div>
+            <div
+              class="btn-search text-center my-5 rounded rounded-3 btn-color"
+            >
+              <button
+                onclick="getSearchMood(this.id)"
+                id="searchCategory"
+                class="btn px-md-5  "
+              >
+                search by category
+              </button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col text-center mx-auto">
+              <div class="table-responsive">
+                <table
+                  class="table table-hover table-active custom-table table-borderless"
+                >
+                  <thead>
+                    <tr>
+                      <th class="">ID</th>
+                      <th>title</th>
+                      <th>category</th>
+                      <th>price</th>
+                      <th>taxes</th>
+                      <th>ads</th>
+                      <th>discount</th>
+                      <th>total</th>
+                      <th>update</th>
+                      <th>delete</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-group-divider" id="tbody"></tbody>
+                </table>
+              </div>
+            </div>
+            <div id="btnDeleteAll" class="btn-color my-5 text-center"></div>
+          </div>
+          <!-- ...existing code... -->
+        </div>
+      </section>
+    </main>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

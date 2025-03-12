@@ -1,0 +1,65 @@
+body {
+  background-color: #243642;
+  color: white;
+  text-transform: capitalize;
+}
+
+input {
+  text-transform: capitalize;
+  background-color: #e2f1e7 !important ;
+}
+input:hover {
+  cursor: pointer;
+}
+#total {
+  border: 3px solid #005b41;
+  width: 50px;
+  padding: 5px 10px;
+  border-radius: 9%;
+  font-size: 16px;
+  font-weight: 600;
+ 
+}
+
+
+.total ::before {
+  content: "total : ";
+}
+.btn-color button {
+  color: white;
+  font-size: 16px;
+  background-color: #005b41;
+  transition: 1s;
+  border-radius: 10px;
+}
+.btn-color :hover {
+  background-color: #02503a;
+  letter-spacing: 2px;
+}
+.btn-btn button {
+  color: white;
+  background-color: #005b41;
+}
+.btn-btn :hover {
+  background-color: #02503a;
+  letter-spacing: 2px;
+}
+.btn-btn button:hover {
+  letter-spacing: 2px;
+}
+
+
+.custom-table th,
+.custom-table td{
+  background-color: transparent !important; 
+  color: #DCD7C9;
+} 
+
+td{
+  font-weight: 600;
+  font-size: 16px;
+}
+.btn-search{
+  /* width: 13rem */
+}
+ 
